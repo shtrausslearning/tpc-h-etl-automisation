@@ -42,6 +42,34 @@
 
 ## **4. Файлы**
 
+- `de-project-user-dag.py` - Главный файл DAG
+- `spark-job` для всех 5 тасков
+```
+    ├── spark-job-customers.py
+    ├── spark-job-lineitems.py
+    ├── spark-job-orders.py
+    ├── spark-job-parts.py
+    ├── spark-job-suppliers.py
+```
+- Конфигурационные файлы для запуска `spark-job` на **kubernetes кластере**
+```
+    ├── spark_submit_customers.yaml
+    ├── spark_submit_lineitems.yaml
+    ├── spark_submit_orders.yaml
+    ├── spark_submit_parts.yaml
+    ├── spark_submit_suppliers.yaml
+```
+- **greenplum** создание таблиц
+```
+    ├── sql-query-customers.sql
+    ├── sql-query-lineitems.sql
+    ├── sql-query-orders.sql
+    ├── sql-query-parts.sql
+    └── sql-query-suppliers.sql
+```
+
+Все файлы:
+
 ```
 └── dags
     ├── de-project-user-dag.py
