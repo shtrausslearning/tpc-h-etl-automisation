@@ -48,6 +48,31 @@
 
 Главное в этой задаче, по большому счету это настройка всех соединении и налаживание самого процесса ETL всех компонентов (S3,PySpark,Greenplum,kubernetes) и все это у нас будет связывать **airflow**
 
+### **Содержание S3**
+
+Исходные данные хронятся в `s3://de-raw/`
+
+```
+root@d4a200ef8c54:/# aws --profile=karpov-user-project --endpoint-url=https://hb.bizmrg.com s3 ls s3://de-raw/
+                           PRE backup/
+                           PRE customer/
+                           PRE lineitem/
+                           PRE nation/
+                           PRE orders/
+                           PRE part/
+                           PRE partsupp/
+                           PRE region/
+                           PRE supplier/
+```
+
+и хранит в себе один конкретный `parquet`, например для `nation`
+
+```
+root@d4a200ef8c54:/# aws --profile=karpov-user-project --endpoint-url=https://hb.bizmrg.com s3 ls s3://de-raw/nation/
+2024-10-19 10:10:02          0 
+2024-10-19 10:10:02       5540 nation.parquet
+```
+
 ### **Полключение spark к S3**
 
 В **pyspark** мы может указать настройки подключения к S3 в `SparkSession`, чтобы можно было работать с этим бакетом.
