@@ -92,6 +92,10 @@ s3a://de-project/{USER_PATH}/orders_report
 
 ## **Обработка данных для отчета по Customers**
 
+**Скрипт**
+
+[spark-job-customers.py](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/dags/spark-job-customers.py)
+
 **Описание задачи**
 
 Необходимо построить отчет по данным о клиентах (customers), содержащий сводную информацию по заказам в разрезе страны, откуда был отправлен заказ, а также приоритета выполняемого заказа.   
@@ -132,6 +136,10 @@ s3a://de-project/{USER_PATH}/customers_report
 
 ## **Обработка данных для отчета по Suppliers**
 
+**Скрипт**
+
+[spark-job-suppliers.py](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/dags/spark-job-suppliers.py)
+
 **Описание задачи**
 
 Необходимо построить отчет по данным о поставщиках(suppliers), содержащий сводную информацию в разрезе страны и региона поставщика.   
@@ -170,6 +178,10 @@ s3a://de-project/{USER_PATH}/suppliers_report
 
 
 ## **Обработка данных для отчета по Part**
+
+**Скрипт**
+
+[spark-job-parts.py](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/dags/spark-job-parts.py)
 
 **Описание задачи**
 
