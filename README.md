@@ -103,7 +103,7 @@ def _spark_session():
 
 ### **Запуск spark-job**
 
-Для запуска pyspark job на kubernetes кластере `kubernetes_karpov`, используется airflow оператор `SparkKubernetesOperator` с указанием пути `application_file` для конфигурационного `.yaml` фаила для запуска spark-job 
+Для запуска pyspark job на kubernetes кластере `kubernetes_karpov`, используется airflow оператор `SparkKubernetesOperator` с указанием пути `application_file` для конфигурационного `.yaml` фаила
 
 ```python
 def _build_submit_operator(task_id: str, application_file: str, link_dag: DAG):
@@ -116,5 +116,28 @@ def _build_submit_operator(task_id: str, application_file: str, link_dag: DAG):
         do_xcom_push=True,
         dag=link_dag
     )
+```
+
+Для каждого из 5 spark-job используется шаблонный конфигурационный файл, в котором мы меняем только название скрипта `mainApplicationFile` и `metadata.name`
+
+```python
+# User guide https://github.com/GoogleCloudPlatform/spark-on-k8s-operator/blob/master/docs/user-guide.md
+apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
+metadata:
+  name: spark-job-user-customers
+spec:
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: itayb/spark:3.1.1-hadoop-3.2.0-aws
+  imagePullPolicy: Always
+  mainApplicationFile: "local:///de-project/dags/user/spark-job-customers.py"
+  sparkVersion: "3.1.1"
+  timeToLiveSeconds: 40
+  restartPolicy:
+    type: Never
+  volumes:
+...
 ```
 
