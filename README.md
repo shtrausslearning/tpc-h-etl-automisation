@@ -100,3 +100,21 @@ def _spark_session():
 - `spark-job-orders.py`
 - `spark-job-suppliers.py`
 - `spark-job-parts.py`
+
+### **Запуск spark-job**
+
+Для запуска pyspark job на kubernetes кластере `kubernetes_karpov`, используется airflow оператор `SparkKubernetesOperator` с указанием пути `application_file` для конфигурационного `.yaml` фаила для запуска spark-job 
+
+```python
+def _build_submit_operator(task_id: str, application_file: str, link_dag: DAG):
+	
+    return SparkKubernetesOperator(
+        task_id=task_id,
+        namespace='de-project',
+        application_file=application_file,
+        kubernetes_conn_id='kubernetes_karpov',
+        do_xcom_push=True,
+        dag=link_dag
+    )
+```
+
