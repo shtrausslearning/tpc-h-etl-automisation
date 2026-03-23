@@ -40,7 +40,29 @@
 
 ![](https://storage.yandexcloud.net/klms-public/production/learning-content/236/2398/21993/64173/299485/KarpovDEProject-1part-ArchConfigure.drawio_gRCHtGB.png)
 
-## **4. ETL pipeline**
+## **4. Файлы**
+
+```
+└── dags
+    ├── de-project-user-dag.py
+    ├── spark-job-customers.py
+    ├── spark-job-lineitems.py
+    ├── spark-job-orders.py
+    ├── spark-job-parts.py
+    ├── spark-job-suppliers.py
+    ├── spark_submit_customers.yaml
+    ├── spark_submit_lineitems.yaml
+    ├── spark_submit_orders.yaml
+    ├── spark_submit_parts.yaml
+    ├── spark_submit_suppliers.yaml
+    ├── sql-query-customers.sql
+    ├── sql-query-lineitems.sql
+    ├── sql-query-orders.sql
+    ├── sql-query-parts.sql
+    └── sql-query-suppliers.sql
+```
+
+## **5. ETL pipeline**
 
 Мы уже научились создавать и заходить в **s3 bucket**, с помощью `aws` и запускать **spark-job** на кластере с `spark-submit`. Для этой задачи нам потребуется это сделать через **pyspark** и автоматизации **airflow**
 
