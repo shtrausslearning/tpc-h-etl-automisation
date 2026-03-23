@@ -98,6 +98,10 @@
 
 Главное в этой задаче, по большому счету это настройка всех соединении и налаживание самого процесса ETL всех компонентов (S3,PySpark,Greenplum,kubernetes) и все это у нас будет связывать **airflow**
 
+### **Схема DAG**
+
+![](https://storage.yandexcloud.net/klms-public/production/learning-content/236/2398/30106/84731/396943/image.png)
+
 ### **Содержание S3**
 
 Исходные данные хронятся в `s3://de-raw/`
