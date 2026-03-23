@@ -191,3 +191,19 @@ spec:
 ...
 ```
 
+### **Итоговая оценка**
+
+|   |   |   |
+|---|---|---|
+|**Раздел**|**Задача**|**Баллы**|
+|**Airflow**|У вашего Airflow DAG последний запуск (DagRun) является успешным (status=SUCCESS)|5|
+|**Airflow**|У вашего Airflow DAG присутствуют шаги с запуском Spark-задач отчетов. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|1x5|
+|**Паиплайны озера данных (Spark+S3)**|В вашем S3 бакете обнаружен отчет с правильной схемой данных. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|1x5|
+|**Паиплайны озера данных (Spark+S3)**|В вашем S3 бакете обнаружен отчет с правильным содержанием данных. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|4x5|
+|**Airflow**|У вашего Airflow DAG присутствуют шаги с запуском построения представлений в Greenplum. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|1x5|
+|**Паиплайны витрин данных (S3+Greenplum)**|В вашей схеме Greenplum обнаружено представление для отчета с правильной схемой данных. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|1X5|
+|**Паиплайны витрин данных (S3+Greenplum)**|В вашей схеме Greenplum обнаружено представление для отчета с правильным содержанием данных. Балл дается за каждый из 5 отчетов (customers_report, orders_report, suppliers_report, parts_report, lineitems_report)|3X5|
+
+Итого возможных баллов: **60**
+
+**Итог проверки: 60/60**
