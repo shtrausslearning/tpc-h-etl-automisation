@@ -43,7 +43,7 @@
 ## **4. Файлы**
 
 - `de-project-user-dag.py` - Главный файл DAG
-- `spark-job` для всех 5 тасков
+- `spark-job` для всех 5 тасков (описание всех тасков можно [найти тут](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/tasks.md))
 ```
     ├── spark-job-customers.py
     ├── spark-job-lineitems.py
