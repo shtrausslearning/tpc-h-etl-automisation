@@ -1,5 +1,9 @@
 ## **Обработка данных для отчета по LineItems**
 
+**Скрипт**
+
+[spark-job-lineitems.py](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/dags/spark-job-lineitems.py)
+
 **Описание задачи**
 
 Необходимо построить отчет по данным о позициях в заказе (lineitems), содержащий сводную информацию по позициям каждого заказа, когда-либо совершенного в системе, группировать данные необходимо по идентификатору заказа.  
@@ -40,6 +44,10 @@ s3a://de-project/{USER_PATH}/lineitems_report
 
 
 ## **Обработка данных для отчета по Orders**
+
+**Скрипт**
+
+[spark-job-orders.py](https://github.com/shtrausslearning/tpc-h-etl-automisation/blob/main/dags/spark-job-orders.py)
 
 **Описание задачи**
 
