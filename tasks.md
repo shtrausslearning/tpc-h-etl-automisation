@@ -1,4 +1,4 @@
-## **Обработка данных для отчета по LineItems**
+## **1. Обработка данных для отчета по LineItems**
 
 **Скрипт**
 
@@ -43,7 +43,7 @@ s3a://de-raw/lineitem
 s3a://de-project/{USER_PATH}/lineitems_report
 
 
-## **Обработка данных для отчета по Orders**
+## **2. Обработка данных для отчета по Orders**
 
 **Скрипт**
 
@@ -90,7 +90,7 @@ s3a://de-raw/orders s3a://de-raw/customer s3a://de-raw/nation
 s3a://de-project/{USER_PATH}/orders_report
 
 
-## **Обработка данных для отчета по Customers**
+## **3. Обработка данных для отчета по Customers**
 
 **Скрипт**
 
@@ -134,7 +134,7 @@ s3a://de-raw/customer s3a://de-raw/nation s3a://de-raw/region
 s3a://de-project/{USER_PATH}/customers_report
 
 
-## **Обработка данных для отчета по Suppliers**
+## **4. Обработка данных для отчета по Suppliers**
 
 **Скрипт**
 
@@ -177,7 +177,7 @@ s3a://de-raw/supplier s3a://de-raw/nation s3a://de-raw/region
 s3a://de-project/{USER_PATH}/suppliers_report
 
 
-## **Обработка данных для отчета по Part**
+## **5. Обработка данных для отчета по Part**
 
 **Скрипт**
 
